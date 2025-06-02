@@ -8,7 +8,7 @@
 - Feature List:
   - age, sex, cp (chest pain type), trestbps (resting blood pressure), etc.
 
-### B. Code for quick insight
+### B. Quick Insight
 
 ```python
 import pandas as pd
