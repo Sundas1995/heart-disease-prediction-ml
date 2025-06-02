@@ -19,7 +19,7 @@ df = pd.read_csv('heart_cleveland_upload.csv')
 # Display the first five rows of the dataset
 df.head()
 ```
-![TabNet Accuracy Output](heart-disease-prediction-ml/images/quick_insight.png)
+![TabNet Accuracy Output](images/quick_insight.png)
 ### C. Code for Data Preprocessing
 
 ```python
