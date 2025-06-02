@@ -8,7 +8,19 @@
 - Feature List:
   - age, sex, cp (chest pain type), trestbps (resting blood pressure), etc.
 
-### B. Code for Data Preprocessing
+### B. Code for quick insight
+
+```python
+import pandas as pd
+
+# Load the dataset with the correct filename
+df = pd.read_csv('heart_cleveland_upload.csv')
+
+# Display the first five rows of the dataset
+df.head()
+```
+
+### C. Code for Data Preprocessing
 
 ```python
 from sklearn.model_selection import train_test_split
@@ -27,7 +39,7 @@ X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 ```
 
-### C. Code for Logistic Regression
+### D. Code for Logistic Regression
 
 ```python
 from sklearn.linear_model import LogisticRegression
@@ -46,7 +58,7 @@ print("Classification Report:\n", classification_report(y_test, y_pred))
 print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred))
 ```
 
-### D. Code for Random Forest Classifier
+### E. Code for Random Forest Classifier
 
 ```python
 from sklearn.ensemble import RandomForestClassifier
@@ -62,8 +74,9 @@ y_pred_rf = rf_model.predict(X_test_scaled)
 print("Random Forest Accuracy:", accuracy_score(y_test, y_pred_rf))
 print("Classification Report:\n", classification_report(y_test, y_pred_rf))
 print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred_rf))
+```
 
-### E. Code for Gradient Boosting Classifier
+### F. Code for Gradient Boosting Classifier
 
 ```python
 from sklearn.ensemble import GradientBoostingClassifier
@@ -81,7 +94,7 @@ print("Classification Report:\n", classification_report(y_test, y_pred_gb))
 print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred_gb))
 ```
 
-### F. TabNet Setup and Code
+### G. TabNet Setup and Code
 
 ```python
 !pip install pytorch-tabnet
