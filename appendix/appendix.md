@@ -57,7 +57,7 @@ print("Accuracy:", accuracy_score(y_test, y_pred))
 print("Classification Report:\n", classification_report(y_test, y_pred))
 print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred))
 ```
-
+![TabNet Accuracy Output](../images/logistic_regression.PNG)
 ### E. Code for Random Forest Classifier
 
 ```python
@@ -75,7 +75,7 @@ print("Random Forest Accuracy:", accuracy_score(y_test, y_pred_rf))
 print("Classification Report:\n", classification_report(y_test, y_pred_rf))
 print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred_rf))
 ```
-
+![TabNet Accuracy Output](../images/random_forest.PNG)
 ### F. Code for Gradient Boosting Classifier
 
 ```python
@@ -93,7 +93,7 @@ print("Gradient Boosting Accuracy:", accuracy_score(y_test, y_pred_gb))
 print("Classification Report:\n", classification_report(y_test, y_pred_gb))
 print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred_gb))
 ```
-
+![TabNet Accuracy Output](../images/gradient_boosting.PNG)
 ### G. TabNet Setup and Code
 
 ```python
@@ -138,7 +138,9 @@ clf.fit(
     num_workers=0,
     drop_last=False
 )
-
+```
+![TabNet Accuracy Output](../images/clf.PNG)
+```python
 # Make predictions
 y_pred = clf.predict(X_test)
 
@@ -147,3 +149,4 @@ print("TabNet Accuracy:", accuracy_score(y_test, y_pred))
 print("\nClassification Report:\n", classification_report(y_test, y_pred))
 print("\nConfusion Matrix:\n", confusion_matrix(y_test, y_pred))
 ```
+![TabNet Accuracy Output](../images/tabnet.PNG)
