@@ -29,6 +29,7 @@ X_test_scaled = scaler.transform(X_test)
 
 ### C. Code for Logistic Regression
 
+```
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
@@ -43,9 +44,11 @@ y_pred = lr_model.predict(X_test_scaled)
 print("Accuracy:", accuracy_score(y_test, y_pred))
 print("Classification Report:\n", classification_report(y_test, y_pred))
 print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred))
+```
 
 ### D. Code for Random Forest Classifier
 
+```
 from sklearn.ensemble import RandomForestClassifier
 
 # Train the model
@@ -75,9 +78,11 @@ y_pred_gb = gb_model.predict(X_test_scaled)
 print("Gradient Boosting Accuracy:", accuracy_score(y_test, y_pred_gb))
 print("Classification Report:\n", classification_report(y_test, y_pred_gb))
 print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred_gb))
+```
 
 ### F. TabNet Setup and Code
 
+```
 !pip install pytorch-tabnet
 
 import pandas as pd
@@ -127,3 +132,4 @@ y_pred = clf.predict(X_test)
 print("TabNet Accuracy:", accuracy_score(y_test, y_pred))
 print("\nClassification Report:\n", classification_report(y_test, y_pred))
 print("\nConfusion Matrix:\n", confusion_matrix(y_test, y_pred))
+```
